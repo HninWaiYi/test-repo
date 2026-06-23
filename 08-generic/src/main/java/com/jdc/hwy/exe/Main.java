@@ -7,6 +7,7 @@ public class Main {
 		Educator<Teacher> teacher = new Educator<>(new Teacher());
 		doWork(prof);
 		doWork(teacher);
+		System.out.println();
 	}
 
 	static void doWork(Educator<?> educator) {
