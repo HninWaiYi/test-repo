@@ -1,0 +1,72 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.jdc.hwy</groupId>
+  <artifactId>15-hibernate-jpa-</artifactId>
+  <version>1.0</version>
+  <packaging>pom</packaging>
+  <properties>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  	<maven.compiler.source>25</maven.compiler.source>
+  	<maven.compiler.target>25</maven.compiler.target>
+  </properties>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>org.hibernate</groupId>
+  		<artifactId>hibernate-core</artifactId>
+  		<version>6.6.53.Final</version>
+  		<scope>compile</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.hibernate</groupId>
+  		<artifactId>hibernate-jpamodelgen</artifactId>
+  		<version>6.6.53.Final</version>
+  		<scope>compile</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.hibernate.orm</groupId>
+  		<artifactId>hibernate-community-dialects</artifactId>
+  		<version>6.6.53.Final</version>
+  		<scope>compile</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.18.42</version>
+		<scope>compile</scope>
+  	</dependency> 	
+  	<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>6.1.0</version>
+			<scope>test</scope>
+		</dependency>
+  </dependencies>
+  <modules>
+  	<module>01-class-and-field-mapppings</module>
+  	<module>02-student-proj</module>
+  	<module>03-managing-entities</module>
+  	
+  	
+  	<module>04-query-language</module>
+  </modules>
+  
+  <build>
+  	<plugins>
+  		<plugin>
+  		<groupId>org.apache.maven.plugins</groupId>
+  		<artifactId>maven-compiler-plugin</artifactId>
+  		<version>3.15.0</version>
+  		<configuration>
+  			<annotationProcessorPaths>
+  				<annotationProcessorPath>
+	  				<groupId>org.hibernate</groupId>
+			  		<artifactId>hibernate-jpamodelgen</artifactId>
+			  		<version>6.6.53.Final</version>
+  				</annotationProcessorPath>
+  			</annotationProcessorPaths>
+  		</configuration>
+  		</plugin>
+  	</plugins>
+  </build>
+</project>

@@ -1,0 +1,1 @@
+com.jdc.hwy.model.DriverLicence.BloodType com.jdc.hwy.model.DriverLicence.LicenceType 
